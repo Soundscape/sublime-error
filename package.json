@@ -1,6 +1,6 @@
 {
   "name": "sublime-error",
-  "version": "0.0.45",
+  "version": "0.0.46",
   "description": "Simple error checking module",
   "main": "./out/index",
   "scripts": {
@@ -33,9 +33,6 @@
     "vinyl-source-stream": "^1.1.0"
   },
   "dependencies": {
-    "extend-error": "0.0.2",
-    "lodash": "^3.8.0",
-    "sublime-core": "0.0.20",
-    "when": "^3.7.3"
+    "extend-error": "0.0.2"
   }
 }
