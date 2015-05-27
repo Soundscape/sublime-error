@@ -51,3 +51,16 @@ describe 'Throw test suite', ()  ->
   it 'should NOT throw when value is NOT NULL nor empty', () ->
     value = 'lorem ipsum dolor sit amet'
     expect(()-> Throw.isNullOrEmpty value, 'value').not.toThrow()
+
+  # NULL OR UNDEFINED OR EMPTY
+  it 'should throw when value is unspecified', () ->
+    value1 = undefined
+    value2 = null
+    value3 = ''
+    expect(()-> Throw.isUnspecified value1, 'value1').toThrow()
+    expect(()-> Throw.isUnspecified value2, 'value2').toThrow()
+    expect(()-> Throw.isUnspecified value3, 'value3').toThrow()
+
+  it 'should NOT throw when value is NOT unspecified', () ->
+    value = 42
+    expect(()-> Throw.isUnspecified value, 'value').not.toThrow()

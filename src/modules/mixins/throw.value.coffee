@@ -22,4 +22,9 @@ mixin = () ->
     @isNull value, name
     @isEmpty value, name
 
+  @isUnspecified = (value, name) ->
+    @isNull value, name
+    @isUndefined value, name
+    @isEmpty value, name
+
 module.exports = () -> mixin.call Throw
